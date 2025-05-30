@@ -1,0 +1,23 @@
+{
+  "name": "maplibre-map",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://hirofumikanda.github.io/maplibre-map",
+  "scripts": {
+    "dev": "vite --port 5173 --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "maplibre-gl": "^4.3.2",
+    "maplibre-gl-gsi-terrain": "^1.2.0",
+    "maplibre-gl-opacity": "^1.7.0"
+  }
+}
