@@ -9,7 +9,7 @@
       ],
       "minzoom": 4,
       "maxzoom": 16,
-      "attribution": "<a href=\"https://maps.gsi.go.jp/vector/\" target=\"_blank\">地理院地図Vector（仮称）</a>"
+      "attribution": "<a href=\"https://github.com/gsi-cyberjapan/gsivectortile-mapbox-gl-js\" target=\"_blank\">地理院地図Vector（仮称）</a>"
     }
   },
   "layers": [

@@ -11,7 +11,6 @@ const map = new maplibregl.Map({
   minZoom: 15,
   maxZoom: 21,
   style: "styles/gsi_std.json",
-  attributionControl: false,
 });
 
 window.map = map;
@@ -152,6 +151,22 @@ map.on("contextmenu", (e) => {
       },
     });
   }
+});
+
+// 注記衝突判定
+document.getElementById("annotation-overlap-toggle").addEventListener("click", function () {
+  // まず1つのsymbolレイヤから現在の設定を取得（なければデフォルト false）
+  const layers = map.getStyle().layers.filter((layer) => layer.type === "symbol");
+  const currentSetting = layers[0] ? map.getLayoutProperty(layers[0].id, "text-allow-overlap") : false;
+
+  // すべてのsymbolレイヤに対して切り替え
+  layers.forEach((layer) => {
+    map.setLayoutProperty(layer.id, "text-allow-overlap", !currentSetting);
+    map.setLayoutProperty(layer.id, "icon-allow-overlap", !currentSetting);
+  });
+
+  // ボタンの表示を更新
+  this.textContent = currentSetting ? "注記衝突判定OFF" : "注記衝突判定ON";
 });
 
 document.getElementById("fly").value =
