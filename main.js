@@ -8,8 +8,8 @@ const map = new maplibregl.Map({
   zoom: initailZoom,
   hash: true,
   center: initialCenter,
-  minZoom: 15,
-  maxZoom: 21,
+  minZoom: 4,
+  maxZoom: 18,
   style: "styles/gsi_std.json",
 });
 
