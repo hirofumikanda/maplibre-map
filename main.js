@@ -166,7 +166,7 @@ document.getElementById("annotation-overlap-toggle").addEventListener("click", f
   });
 
   // ボタンの表示を更新
-  this.textContent = currentSetting ? "注記衝突判定OFF" : "注記衝突判定ON";
+  this.textContent = currentSetting ? "注記衝突判定ON" : "注記衝突判定OFF";
 });
 
 document.getElementById("fly").value =
